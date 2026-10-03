@@ -1,0 +1,25 @@
+{
+  "observations": [
+    {
+      "observation_id": "example-1",
+      "experiment_id": "example-1",
+      "model": "example-model",
+      "effort": "medium",
+      "benchmark": "example-benchmark",
+      "dataset_version": "example-dataset",
+      "metric": "example_metric",
+      "unit": "percent",
+      "value": 80,
+      "protocol": "synthetic-example",
+      "surface": "API",
+      "evaluator": "example-evaluator",
+      "tool_config": "example-config",
+      "evidence_status": "illustrative_example",
+      "source_url": "example://synthetic-not-measured",
+      "retrieved_at": "2026-10-03",
+      "confidence_interval": null,
+      "limitations": ["Synthetic schema example; not a measured benchmark result."]
+    }
+  ],
+  "domains": []
+}
