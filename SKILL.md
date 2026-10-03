@@ -1,6 +1,6 @@
 ---
 name: governor
-description: Control AI resources during execution while preserving required quality: model and effort choices, context, retrieval, tools, verification, retries, reuse, and stopping. Use when resource choices materially affect cost, latency, reliability, or progress, or when the user asks for Governor. Do not change the user's goal, hard constraints, or mandatory quality gates.
+description: "Control AI resources during execution while preserving required quality: model and effort choices, context, retrieval, tools, verification, retries, reuse, and stopping. Use when resource choices materially affect cost, latency, reliability, or progress, or when the user asks for Governor. Do not change the user's goal, hard constraints, or mandatory quality gates."
 ---
 
 # Governor
