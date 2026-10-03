@@ -1,0 +1,26 @@
+name: Validate Governor
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: governor
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install validation dependency
+        run: python -m pip install -r governor/requirements-dev.txt
+      - name: Run static Skill audit
+        run: python governor/scripts/audit_skill.py governor --portable
+      - name: Validate example execution contract
+        run: python governor/scripts/validate_contract.py governor/assets/execution-contract.json
+      - name: Run benchmark aggregation smoke test
+        run: python governor/scripts/aggregate_benchmarks.py governor/assets/benchmark-example.json
+      - name: Run auditor regression tests
+        run: python governor/scripts/test_audit_skill.py
